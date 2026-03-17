@@ -1,12 +1,16 @@
+-- Disable true color to force terminal ANSI usage
+vim.opt.termguicolors = false
+
+-- Install and configure pixel.nvim
 return {
   {
-    'folke/tokyonight.nvim',
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = 'transparent',
-        floats = 'transparent',
-      },
-    },
+    'bjarneo/pixel.nvim',
+    config = function()
+      -- Optional: disable italics
+      require('pixel').setup {
+        disable_italics = true,
+      }
+      vim.cmd.colorscheme 'pixel'
+    end,
   },
 }

@@ -15,3 +15,8 @@ rm -rf ~/.local/share/nvim
 git clone https://github.com/AkashAswal5/nvim.git ~/.config/nvim
 ```
 
+plugins 
+
+- transparent wallpaper  lua/custom/plugins/transparent.lua
+- remove/disable cursorline vim.opt.cursorline = false in init.lua
+
